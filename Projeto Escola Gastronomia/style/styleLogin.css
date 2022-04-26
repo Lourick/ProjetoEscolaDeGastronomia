@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.login {
+    height: 100vh;
+    background: linear-gradient(120deg, #fff, #D17A22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__container {
+    min-height: 400px;
+    width: 300px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px 1px #4D0610;
+}
+
+.login__title {
+    margin-bottom: 32px;
+    color: #303030;
+}
+
+.login__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__input {
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+}
+/*  span (o risquinho embaixo dos input) */
+.login__input-border {
+    height: 1px;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: #D0CFCF;
+    transition: .3s ease-in-out;
+}
+/* eefeito nos input, quando é clicado fica colorido e com animação bonitinhA*/
+.login__input-border::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0%;
+    margin-bottom: 16px;
+    background: linear-gradient(120deg, #D17A22, #33493D);
+    transition: .3s ease-in-out;
+}
+/* aqui é pra animaçao colorida percorrer a barra completa do span*/
+.login__input:focus + .login__input-border::after {
+    width: 100%;
+}
+
+.login__submit {
+    height: 48px;
+    width: 100%;
+    outline: none; /* pra nao aparecer aquela linha azul quando o botão for clicado */
+    background: linear-gradient(120deg, #D17A22, #33493D, #D17A22); /* cores no botão de login */
+    background-size: 200%; /* para expandir o tamanho dele, deixar mais bonito na passada do mouse */
+    margin-bottom: 32px; /* espaço para o botao de esquecer a senha */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;/* para ficar em negrito */
+    border: none;/* tirando a borda padrão dele que o navegador coloca */
+    border-radius: 4px; /* deizxar redondinho */
+    cursor: pointer;/* para transformar em maozinha quando colocar o mouse em cima do botão de login */
+    transition: .5s ease-in-out;
+}
+
+
+.login__submit:hover {
+    background-position: right;
+}
+
+/* o "esqueci a senha" */
+.login__reset {
+    font-size: 12px;
+    color: #929292;
+    text-decoration: none;
+}
+
+.login__reset:hover {
+    font-size: 12px;
+    color: #929292;
+    text-decoration: underline;
+}
