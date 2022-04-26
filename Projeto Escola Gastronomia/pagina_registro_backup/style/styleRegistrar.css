@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.registrar {
+    height: 100vh;
+    background: linear-gradient(120deg, #fff, #D17A22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registrar__container {
+    min-height: 400px;
+    width: 300px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px 1px #4D0610;
+}
+
+.registrar__title {
+    margin-bottom: 20px;
+    color: #303030;
+    font-size: 30px;
+}
+
+.registrar__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.registrar__input {
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+}
+/*  span (o risquinho embaixo dos input) */
+.registrar__input-border {
+    height: 1px;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: #D0CFCF;
+    transition: .3s ease-in-out;
+}
+/* eefeito nos input, quando é clicado fica colorido e com animação bonitinhA*/
+.registrar__input-border::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0%;
+    margin-bottom: 16px;
+    background: linear-gradient(120deg, #D17A22, #33493D);
+    transition: .3s ease-in-out;
+}
+/* aqui é pra animaçao colorida percorrer a barra completa do span*/
+.registrar__input:focus + .registrar__input-border::after {
+    width: 100%;
+}
+
+.registrar__submit {
+    height: 48px;
+    width: 236px;
+    outline: none; /* pra nao aparecer aquela linha azul quando o botão for clicado */
+    background: linear-gradient(120deg, #33493D, #33493D, #D17A22); /* cores no botão de login */
+    background-size: 200%; /* para expandir o tamanho dele, deixar mais bonito na passada do mouse */
+    margin-bottom: 32px; /* espaço para o botao de esquecer a senha */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;/* para ficar em negrito */
+    border: none;/* tirando a borda padrão dele que o navegador coloca */
+    border-radius: 4px; /* deizxar redondinho */
+    cursor: pointer;/* para transformar em maozinha quando colocar o mouse em cima do botão de login */
+    transition: .5s ease-in-out;
+}
+
+
+.registrar__submit:hover {
+    background-position: right;
+}
+
+.azito {
+    color: #ffffff;
+    text-decoration: none;
+}
