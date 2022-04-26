@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styleRegistrar.css">
+    <title>Registre-se</title>
+</head>
+<body>
+    <main class="registrar">
+        <div class="registrar__container">
+            <h1 class="registrar__title">Crie sua Conta</h1>
+            <form class="registrar__form">
+
+                <input id="registrar_nome" class="registrar__input" type="name" placeholder="Nome completo">
+                <span class="registrar__input-border"></span>
+                
+                <input class="registrar__input" type="email" placeholder="E-mail" id="email">
+                <span class="registrar__input-border"></span>
+
+                <input class="registrar__input" type="email" placeholder="Confirme o e-mail" id="emailConfirm">
+                <span class="registrar__input-border"></span>
+
+                <input class="registrar__input" type="password" placeholder="Senha" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter ao menos 8 caracteres, um número, uma letra minúscula e uma letra maiúscula.">
+                <span class="registrar__input-border"></span>
+
+                <input class="registrar__input" type="password" placeholder="Confirme a senha" id="passwordConfirm" title="Deve conter ao menos 8 caracteres, um número, uma letra minúscula e uma letra maiúscula.">
+                <span class="registrar__input-border"></span>
+
+
+                <button class="registrar__submit" onclick="verificarEmail()"><a href="#" class="azito">Registre-se</a></button>
+
+                
+            </form> 
+        </div>  
+
+        <div id="message">
+            <h3>A senha deve conter os seguintes caracteres:</h3>
+            <p id="letter" class="invalid">Uma letra <b>minúscula</b></p>
+            <p id="capital" class="invalid">Uma letra <b>maiúscula</b></p>
+            <p id="number" class="invalid">Um <b>número</b></p>
+            <p id="length" class="invalid">Mínimo de <b>8 caracteres</b></p>
+          </div>
+    </main>
+
+    <script src="./registrar.js"></script>
+</body>
+</html>
+
+
